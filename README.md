@@ -142,6 +142,17 @@ Fail2Ban is able to reduce the rate of incorrect authentications attempts howeve
 [source](https://www.fail2ban.org/wiki/index.php/Main_Page)
 
 
+### Making automatic updates
+
+
+```
+sudo apt install unattended-upgrades apt-listchanges
+echo unattended-upgrades unattended-upgrades/enable_auto_updates boolean true | debconf-set-selections
+dpkg-reconfigure -f noninteractive unattended-upgrades
+```
+[Unattended upgrades wiki on Debian](https://wiki.debian.org/UnattendedUpgrades)
+
+
 
 #### Tasks
 - [ ] Preapare security manual commands.
