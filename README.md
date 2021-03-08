@@ -53,9 +53,13 @@ Test the new connection config by trying to connect via SSH
 ```
 ssh user@host
 ```
+If you putted the file in a custom path
+```
+ssh -i /custom_path/custom_filename user@host
+```
 **!Make sure to have a backup key,, you won't be able to connect if you lost the key file!**
 
-Now in in /etc/sshd_config ( in the VPS )
+Now in in /etc/ssh/sshd_config ( in the VPS )
 ```
 ChallengeResponseAuthentication no
 PasswordAuthentication no
